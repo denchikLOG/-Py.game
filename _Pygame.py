@@ -4,8 +4,8 @@ import math
 
 pygame.init()
 
-LAIUS,K’RGUS=800,600
-ekraan=pygame.display.set_mode((LAIUS,K’RGUS))
+LAIUS, K√ïRGUS = 800, 600
+ekraan=pygame.display.set_mode((LAIUS,K√ïRGUS))
 pygame.display.set_caption("Lihtne aken")
 font=pygame.font.SysFont("arial",50,bold=True)
 
@@ -21,11 +21,11 @@ TUMEROHELINE=(0,100,0)
 bee_image=pygame.image.load("bee_image.png")
 bee_image=pygame.transform.scale(bee_image,(100,100))
 
-def joonista_p‰ike():
+def joonista_p√§ike():
     for nurk in range(0,360,5):
-        lıpp_x=100+200*math.cos(math.radians(nurk))
-        lıpp_y=100+200*math.sin(math.radians(nurk))
-        pygame.draw.line(ekraan,KOLLANE,(100,100),(lıpp_x,lıpp_y),2)
+        l√µpp_x=100+200*math.cos(math.radians(nurk))
+        l√µpp_y=100+200*math.sin(math.radians(nurk))
+        pygame.draw.line(ekraan,KOLLANE,(100,100),(l√µpp_x,l√µpp_y),2)
 
 def joonista_pilv():
     pygame.draw.circle(ekraan,HALL,(650,100),50)
@@ -33,8 +33,8 @@ def joonista_pilv():
 
 def joonista_lill():
     for raadius in range(100,10,-10):
-        v‰rv=ROOSA if raadius%20==0 else TUMEROOSA
-        pygame.draw.circle(ekraan,v‰rv,(400,300),raadius,2)
+        v√§rv=ROOSA if raadius%20==0 else TUMEROOSA
+        pygame.draw.circle(ekraan,v√§rv,(400,300),raadius,2)
     pygame.draw.rect(ekraan,TUMEROHELINE,(390,300,20,200))
 
 def joonista_tekst():
@@ -42,15 +42,15 @@ def joonista_tekst():
     ekraan.blit(tekst,(300,50))
 
 while True:
-    for s¸ndmus in pygame.event.get():
-        if s¸ndmus.type==pygame.QUIT:
+    for s√ºndmus in pygame.event.get():
+        if s√ºndmus.type==pygame.QUIT:
             pygame.quit()
             sys.exit()
 
     ekraan.fill(SININE)
-    pygame.draw.rect(ekraan,ROHELINE,(0,K’RGUS//2,LAIUS,K’RGUS//2))
+    pygame.draw.rect(ekraan,ROHELINE,(0,K√ïRGUS//2,LAIUS,K√ïRGUS//2))
 
-    joonista_p‰ike()
+    joonista_p√§ike()
     joonista_pilv()
     joonista_lill()
     joonista_tekst()
